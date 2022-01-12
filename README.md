@@ -1,1 +1,1 @@
-# HTML-CSS-Prac
+# HTML-CSS-Practice-Small-Projects
