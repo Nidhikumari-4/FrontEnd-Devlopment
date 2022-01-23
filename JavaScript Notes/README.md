@@ -143,10 +143,452 @@ console.log(isNaN(Number.NaN));
 ```
 ####  <u>Ques-3 🙋</u> - What is difference between var vs let vs const  ?
 - 
+-
+
 <br>
 
-## **2.  Arithmetic operators in JavaScript**
+## **3.  Arithmetic operators in JavaScript**
 
 ![](./images/exp1.jpg)
 
-### **1.Assignment Operator**
+### **1️⃣Assignment Operator**
+- An assignment operator assigns a value to its left operand 
+-  based on the value of its right operand. 
+- The simple assignment operator is equal (=)
+
+### **2️⃣Arithmetic operators**
+- An arithmetic operator takes numerical values 
+- (either literals or variables) as their operands and 
+- returns a single numerical value.
+
+### Increment and Decrement operator
+- Operator: x++ or ++x or x-- or --x
+- If used postfix, with operator after operand (for example, x++), 
+- the increment operator increments and returns the value before incrementing.
+
+```
+ var num = 15;
+ var newNum = num-- + 5;
+ console.log(num);
+ console.log(newNum);
+```
+- Postfix increment operator means the expression is evaluated 
+- first using the original value of the variable and then the 
+- variable is incremented(increased).
+
+
+- If used prefix, with operator before operand (for example, ++x), 
+- the increment operator increments and returns the value after incrementing.
+
+```
+ var num = 15;
+ var newNum = --num + 5; 
+ console.log(num);
+ console.log(newNum);
+```
+
+### **3️⃣Comparison operators**
+- A comparison operator compares its operands and 
+- returns a logical value based on whether the comparison is true.
+
+```
+var a=30;
+var b=10;
+console.log(a==b);
+console.log(a!=b);
+console.log(a<b);
+console.log(a>b);
+console.log(a<=b);
+console.log(a>=b);
+```
+### **4️⃣ Logical operators**
+- Logical operators are typically used with Boolean (logical) values; 
+- when they are, they return a Boolean value.
+
+
+### Logical AND (&&)
+- The logical AND (&&) operator (logical conjunction) for a set of 
+- operands is true if and only if one or more of its expressions are true.
+
+```
+var a = 30;
+var b = -20;
+console.log(a > b && b > -50 && b < 0);
+console.log(!true);
+```
+
+### Logical OR (||)
+- The logical OR (||) operator (logical disjunction) for a set of 
+- operands is true if and only if one or more of its expressions are true.
+```
+var a = 30;
+var b = -20;
+console.log((a < b) || (b > 0) || (b > 0));
+console.log(!true);
+```
+
+### Logical NOT (!)
+- The logical NOT (!) operator (logical complement, negation) 
+- takes truth to falsity and vice versa.
+```
+var a = 30;
+var b = -20;
+console.log(!((a>0) || (b<0)));
+console.log(!true);
+```
+
+### **5️⃣ String Concatenation(operators)**
+- The concatenation operator (+) concatenates two string values together, 
+- returning another string that is the union of the two operand strings.
+
+```
+ console.log("Hello World");
+
+ console.log("hello " +  "world");
+
+ var myName = "vinod";
+
+ console.log(myName + " thapa");
+ console.log(myName + " bahadur");
+ console.log(myName + " bahadur Thapa");
+```
+
+####  <u>Ques-1 🙋</u> - What will be the output of 3**3  ?
+- console.log(9**2); // 9*9
+- console.log(10 ** -1); //1/10
+
+
+####  <u>Ques-2 🙋</u> - What will be the output, when we add a number and a string ?
+- console.log(5 + "thapa");
+
+####  <u>Ques-3 🙋</u> - Write a program to swap two numbers ?
+
+```
+var a = 5;
+var b = 10;
+output b=5; a=10
+
+ var c = b; //c = 10
+ b = a; // b = 5;
+ a = c;
+
+ console.log("the value of a is " + a);
+ console.log("the value of b is " + b);
+```
+
+####  <u>Ques-4 🙋</u> - Write a program to swap two numbers without using third variable ? 
+```
+ var a = 5;
+ var b = 10;
+
+ output b=5; a=10
+
+ a = a + b; // a = 15
+ b = a - b; // b = 5; 
+ a = a - b; // a = 10;
+
+ console.log("the value of a is " + a);
+ console.log("the value of b is " + b);
+```
+####  <u>Ques-5 🙋</u> - What is the Difference between == vs === ?
+
+- == check only value and === checks value and datatype of that value.
+
+```
+ var num1 = 5;
+ var num2 = '5';
+
+ console.log(typeof(num1));
+ console.log(typeof(num2));
+
+ console.log(num1 == num2 );
+
+ var num1 = 5;
+ var num2 = '5';
+
+ console.log(typeof(num1));
+ console.log(typeof(num2));
+ console.log(num2);
+
+ console.log(num1 === num2 );
+```
+## **4.  Control Statement**
+
+![](./images/loop1.jpg)
+
+### **1️⃣If...Else**
+- The if statement executes a statement if a specified condition is truth. 
+- If the condition is false, another statement can be executed.
+
+```
+var tomr = 'sunny';
+
+if(tomr == 'rain'){
+console.log('take a raincoat');
+}
+else{
+console.log('No need to take a raincoat');
+}
+```
+####  <u>Ques-1 🙋</u> - write a program that works out whether if a given year is a leap year or not?
+
+- A normal year has 365 days, leap years have 366, with an extra day in February.
+```
+var year = 2020;
+debugger;
+if(year % 4 === 0){
+if(year % 100 === 0){
+if(year % 400 === 0){
+console.log("The year " + year + " is a leap year");
+}else{
+console.log("The year " + year + " is not a leap year");
+ }
+}else{
+console.log("The year " + year + " is a leap year");
+}
+}else{
+console.log("The year " + year + " is not a leap year");
+}
+```
+
+####  <u>Ques-2 🙋</u> -What istruthy and falsy values inJavascript?
+- we have total 5 falsy values injavascript
+-  👉 0,"",undefined,null,NaN,false** is false anyway
+
+```
+if(score = 5){
+console.log("OMG, we loss the game 😭");
+}
+else{
+console.log("Yay, We won the game 😀");
+}
+```
+
+### **2️⃣Conditional (ternary) operator**
+- he conditional (ternary) operator is the only JavaScript operator 
+- that takes three operands
+```
+var age = 17;
+if(age >= 18){
+console.log("you are eligible to vote");
+}else{
+console.log("you are not eligible to vote");
+}
+
+var age = 18;
+console.log((age >= 18) ? "you can vote" : "you can't vote");
+```
+
+### **3️⃣ switch Statement**
+-  Evaluates an expression, matching the expression's value to a 
+- case clause, and executes statements associated with that case.
+
+### 1st without break statment 
+<br>
+
+####  <u>Ques-3 🙋</u> -Find the Area of circle, triangle and rectangle?
+```
+ar area = "square" ;
+var PI = 3.142, l=5, b=4, r=3;
+
+if(area == "circle"){
+  console.log("the area of the circle is : " + PI*r**2);
+}else if(area == "triangle"){
+  console.log("the area of the triangle is : " + (l*b)/2);
+}else if(area == "rectangle"){
+  console.log("the area of the rectangle is : " + (l*b));
+}else{
+  console.log("please enter valid data");
+}
+
+var area = "dsfsad" ;
+var PI = 3.142, l=5, b=4, r=3;
+
+switch(area){
+  case 'circle': 
+    console.log("the area of the circle is : " + PI*r**2);
+    break;
+
+  case 'triangle':
+    console.log("the area of the triangle is : " + (l*b)/2);
+    break;
+
+  case 'rectangle':
+    console.log("the area of the rectangle is : " + (l*b));
+    break;
+
+  default:
+    console.log("please enter valid data");
+}   
+```
+### Break
+- Terminates the current loop, switch, or label 
+- statement and transfers 
+- program control to the statement following the terminated statement.
+
+
+### Continue
+- Terminates execution of the statements in the current iteration of the 
+- current or labeled loop, and continues execution of the loop with the 
+- next iteration.
+
+
+### **4️⃣ While Loop Statement**
+
+- The while statement creates a loop that executes a specified statement 
+as long as the test condition evaluates to true. 
+```
+var num=20;
+block scope 
+while(num <= 10){
+console.log(num); //infinte loop
+num++;
+}
+```
+
+### **5️⃣ Do-While Loop Statement**
+```
+var num = 20;
+do{
+debugger;
+console.log(num); //infinte loop
+num++;
+}while(num <= 10);
+```
+
+### **6️⃣ For Loop**
+```
+for(var num = 0; num <= 10; num++){
+debugger;
+console.log(num);
+}
+```
+
+####  <u>Ques-4 🙋</u> -JavaScript program to print table for given number (8)?
+```
+output :  8 * 1 = 8 
+          8 * 2 = 16(8*2)
+           => 8 * 10 = 80
+```
+<br>
+
+```
+for(var num = 1; num<= 10; num++){
+var tableOf = 12;  
+console.log(tableOf + " * " + num + " = " + tableOf * num);
+}
+```
+## **4.  Control Statement**
+
+![](./images/fun1.jpg)
+
+### **1️⃣Function Definition**
+- A function definition (also called a function declaration, or function statement) 
+- consists of the function keyword, followed by:
+
+- The name of the function.
+- A list of parameters to the function, enclosed in parentheses and separated by commas.
+- The JavaScript statements that define the function, enclosed in curly brackets, {...}.
+
+```
+var a = 10;
+var b = 20;
+var sum = a+b;
+console.log(sum);
+
+
+function sum(){
+var a = 10, b = 40;
+var total = a+b;
+console.log(total);
+}
+```
+
+### **2️⃣Calling functions**
+- Defining a function does not execute it.
+- A JavaScript function is executed when "something" invokes it (calls it).
+
+```
+function sum(){
+var a = 10, b = 40;
+var total = a+b;
+console.log(total);
+}
+
+sum();
+```
+
+### **3️⃣ Function Parameter vs Function Arguments**
+- Function parameters are the names listed in the function's definition. 
+- Function arguments are the real values passed to the function.
+
+```
+function sum(a,b){
+var total = a+b;
+console.log(total);
+}
+
+sum();
+sum(20,30);
+sum(50,50);
+sum(5,6)
+```
+
+####  <u>Ques-1 🙋</u> -Why Functions ?
+- You can reuse code: Define the code once, and use it many times.
+- You can use the same code many times with different arguments, 
+- to produce different results.
+
+ OR
+
+- A function is a group of reusable code which can be called anywhere 
+- in your program. This eliminates the need of writing the same code 
+- again and again.
+
+- DRY => do not repeat yourself
+
+### **4️⃣ Function expressions**
+- "Function expressions simply means create a function and put it into the variable "
+```
+function sum(a,b){
+var total = a+b;
+console.log(total);
+}
+
+var funExp = sum(5,15);
+
+```
+
+### **5️⃣ Return Keyword**
+- When JavaScript reaches a return statement, 
+- the function will stop executing.
+- Functions often compute a return value.
+- The return value is "returned" back to the "caller"
+
+```
+function sum(a,b){
+return total = a+b;
+}
+
+var funExp = sum(5,25);
+
+console.log('the sum of two no is ' + funExp );
+```
+
+### **6️⃣ Anonymous Function**
+- A function expression is similar to and has the same syntax 
+- as a function declaration One can define "named" 
+- function expressions (where the name of the expression might 
+- be used in the call stack for example) 
+- or "anonymous" function expressions.
+
+```
+var funExp = function(a,b){
+return total = a+b;
+}
+
+var sum = funExp(15,15);
+var sum1 = funExp(20,15);
+
+console.log(sum > sum1 );
+```
