@@ -1,4 +1,4 @@
-# **CODE WITH HARRY**
+#  **CODE WITH HARRY**
 ## What is JavaScript?
 
 - JavaScript is a client side scripting language.
