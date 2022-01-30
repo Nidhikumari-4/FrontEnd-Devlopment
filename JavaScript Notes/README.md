@@ -150,19 +150,15 @@ console.log(isNaN(Number.NaN));
 ![](./images/exp1.jpg)
 
 ### **1️⃣Assignment Operator**
-- An assignment operator assigns a value to its left operand 
--  based on the value of its right operand. 
+- An assignment operator assigns a value to its left operand based on the value of its right operand. 
 - The simple assignment operator is equal (=)
 
 ### **2️⃣Arithmetic operators**
-- An arithmetic operator takes numerical values 
-- (either literals or variables) as their operands and 
-- returns a single numerical value.
+- An arithmetic operator takes numerical values (either literals or variables) as their operands and returns a single numerical value.
 
 ### Increment and Decrement operator
 - Operator: x++ or ++x or x-- or --x
-- If used postfix, with operator after operand (for example, x++), 
-- the increment operator increments and returns the value before incrementing.
+- If used postfix, with operator after operand (for example, x++),  the increment operator increments and returns the value before incrementing.
 
 ```
  var num = 15;
@@ -170,13 +166,10 @@ console.log(isNaN(Number.NaN));
  console.log(num);
  console.log(newNum);
 ```
-- Postfix increment operator means the expression is evaluated 
-- first using the original value of the variable and then the 
-- variable is incremented(increased).
+- Postfix increment operator means the expression is evaluated first using the original value of the variable and then the variable is incremented(increased).
 
 
-- If used prefix, with operator before operand (for example, ++x), 
-- the increment operator increments and returns the value after incrementing.
+- If used prefix, with operator before operand (for example, ++x),  the increment operator increments and returns the value after incrementing.
 
 ```
  var num = 15;
@@ -186,8 +179,7 @@ console.log(isNaN(Number.NaN));
 ```
 
 ### **3️⃣Comparison operators**
-- A comparison operator compares its operands and 
-- returns a logical value based on whether the comparison is true.
+- A comparison operator compares its operands and returns a logical value based on whether the comparison is true.
 
 ```
 var a=30;
@@ -200,13 +192,11 @@ console.log(a<=b);
 console.log(a>=b);
 ```
 ### **4️⃣ Logical operators**
-- Logical operators are typically used with Boolean (logical) values; 
-- when they are, they return a Boolean value.
+- Logical operators are typically used with Boolean (logical) values, when they are, they return a Boolean value.
 
 
 ### Logical AND (&&)
-- The logical AND (&&) operator (logical conjunction) for a set of 
-- operands is true if and only if one or more of its expressions are true.
+- The logical AND (&&) operator (logical conjunction) for a set of operands is true if and only if one or more of its expressions are true.
 
 ```
 var a = 30;
@@ -216,8 +206,7 @@ console.log(!true);
 ```
 
 ### Logical OR (||)
-- The logical OR (||) operator (logical disjunction) for a set of 
-- operands is true if and only if one or more of its expressions are true.
+- The logical OR (||) operator (logical disjunction) for a set of operands is true if and only if one or more of its expressions are true.
 ```
 var a = 30;
 var b = -20;
@@ -226,8 +215,7 @@ console.log(!true);
 ```
 
 ### Logical NOT (!)
-- The logical NOT (!) operator (logical complement, negation) 
-- takes truth to falsity and vice versa.
+- The logical NOT (!) operator (logical complement, negation) akes truth to falsity and vice versa.
 ```
 var a = 30;
 var b = -20;
@@ -236,8 +224,7 @@ console.log(!true);
 ```
 
 ### **5️⃣ String Concatenation(operators)**
-- The concatenation operator (+) concatenates two string values together, 
-- returning another string that is the union of the two operand strings.
+- The concatenation operator (+) concatenates two string values together, returning another string that is the union of the two operand strings.
 
 ```
  console.log("Hello World");
@@ -363,8 +350,7 @@ console.log("Yay, We won the game 😀");
 ```
 
 ### **2️⃣Conditional (ternary) operator**
-- he conditional (ternary) operator is the only JavaScript operator 
-- that takes three operands
+- he conditional (ternary) operator is the only JavaScript operator that takes three operands
 ```
 var age = 17;
 if(age >= 18){
@@ -378,8 +364,7 @@ console.log((age >= 18) ? "you can vote" : "you can't vote");
 ```
 
 ### **3️⃣ switch Statement**
--  Evaluates an expression, matching the expression's value to a 
-- case clause, and executes statements associated with that case.
+-  Evaluates an expression, matching the expression's value to a case clause, and executes statements associated with that case.
 
 ### 1st without break statment 
 <br>
@@ -420,15 +405,11 @@ switch(area){
 }   
 ```
 ### Break
-- Terminates the current loop, switch, or label 
-- statement and transfers 
-- program control to the statement following the terminated statement.
+- Terminates the current loop, switch, or label statement and transfers program control to the statement following the terminated statement.
 
 
 ### Continue
-- Terminates execution of the statements in the current iteration of the 
-- current or labeled loop, and continues execution of the loop with the 
-- next iteration.
+- Terminates execution of the statements in the current iteration of the current or labeled loop, and continues execution of the loop with the next iteration.
 
 
 ### **4️⃣ While Loop Statement**
@@ -476,14 +457,16 @@ var tableOf = 12;
 console.log(tableOf + " * " + num + " = " + tableOf * num);
 }
 ```
-## **4.  Control Statement**
+
+
+
+
+## **4.  Functions**
 
 ![](./images/fun1.jpg)
 
 ### **1️⃣Function Definition**
-- A function definition (also called a function declaration, or function statement) 
-- consists of the function keyword, followed by:
-
+- A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:
 - The name of the function.
 - A list of parameters to the function, enclosed in parentheses and separated by commas.
 - The JavaScript statements that define the function, enclosed in curly brackets, {...}.
@@ -534,14 +517,11 @@ sum(5,6)
 
 ####  <u>Ques-1 🙋</u> -Why Functions ?
 - You can reuse code: Define the code once, and use it many times.
-- You can use the same code many times with different arguments, 
-- to produce different results.
+- You can use the same code many times with different arguments, to produce different results.
 
  OR
 
-- A function is a group of reusable code which can be called anywhere 
-- in your program. This eliminates the need of writing the same code 
-- again and again.
+- A function is a group of reusable code which can be called anywhere in your program. This eliminates the need of writing the same code again and again.
 
 - DRY => do not repeat yourself
 
@@ -574,11 +554,7 @@ console.log('the sum of two no is ' + funExp );
 ```
 
 ### **6️⃣ Anonymous Function**
-- A function expression is similar to and has the same syntax 
-- as a function declaration One can define "named" 
-- function expressions (where the name of the expression might 
-- be used in the call stack for example) 
-- or "anonymous" function expressions.
+- A function expression is similar to and has the same syntax as a function declaration One can define "named" function expressions (where the name of the expression might be used in the call stack for example) or "anonymous" function expressions.
 
 ```
 var funExp = function(a,b){
@@ -835,3 +811,5 @@ console.log(foo)
 x = 3.14; 
 console.log(x);
 ```
+
+
