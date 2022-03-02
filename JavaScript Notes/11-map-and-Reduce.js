@@ -32,7 +32,6 @@
 
 
 
-// 😀9: challenge Time 🏁
 
 //  1: Find the square root of each element in an array?
 //  2: Multiply each element by 2 and return only those 

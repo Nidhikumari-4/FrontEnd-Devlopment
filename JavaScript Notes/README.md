@@ -985,7 +985,7 @@ var fruits = ["Banana", "Orange", "Apple", "Mango"];
 let aFruits = fruits.sort();
 ```
 
-### **4️⃣  Perform CRUD in Array** 
+### **4️⃣  CRUD(create,read,update and delete) in Array** 
 ### **10. Array.prototype.push() 🙋‍♂️**
 - The push() method adds one or more elements to the  end of an array and returns the new length of the array.
 ```
@@ -1362,3 +1362,677 @@ console.log(txt.split("|"));         // Split on pipe
 ## **3.  Date and Time in JavaScript**
 - JavaScript Date objects represent a single moment in time in a 
 platform-independent format. Date objects contain a Number that represents milliseconds since 1 January 1970 UTC.
+
+### 👉 Creating Date Objects
+
+- There are 4 ways to create a new date object:
+  - new Date()
+  - new Date(year, month, day, hours, minutes, seconds milliseconds) it takes 7 arguments
+  - new Date(milliseconds)
+  - new Date(date string)
+
+### **1.  new Date() 🙋‍♂️**
+-  Date objects are created with the new Date() constructor.
+```
+let currDate = new Date(); 
+console.log(currDate);
+
+console.log(new Date());
+console.log(new Date().toLocaleString()); // 9/11/2019, 1:25:01 PM
+console.log(new Date().toString()); // Wed Sep 11 2019 13:25:01 GMT+0700 (GMT+07:00)
+```
+
+### **2.  Date.now() 🙋‍♂️**
+- Returns the numeric value corresponding to the current time—the number of milliseconds elapsed since January 1, 1970 00:00:00 UTC
+-  console.log(Date.now());
+
+
+### **3.  new Date(year, month, ...)  🙋‍♂️**
+- 7 numbers specify year, month, day, hour, minute, second, 
+and millisecond (in that order)
+- Note: JavaScript counts months from 0 to 11.January is 0. December is 11.
+```
+var d = new Date(2021,0);
+console.log(d.toLocaleString());
+```
+
+
+### **4.  new Date(dateString)  🙋‍♂️**
+- new Date(dateString) creates a new date object from a date string
+```
+var d = new Date("October 13, 2021 11:13:00");
+console.log(d.toLocaleString());
+```
+
+### **5.  new Date(milliseconds)  🙋‍♂️**
+- new Date(milliseconds) creates a new date object as zero time plus milliseconds:
+```
+var d = new Date(0);
+var d = new Date(1609574531435);
+var d = new Date(86400000*2);
+console.log(d.toLocaleString());
+```
+
+
+### 👉 Dates Method
+### **How to get the indivisual date   🙋‍♂️**
+```
+const curDate = new Date();
+console.log(curDate.toLocaleString());
+console.log(curDate.getFullYear());
+console.log(curDate.getMonth()); // 0-11 jan to dec
+console.log(curDate.getDate());
+console.log(curDate.getDay());
+```
+
+### **How to set the indivisual date   🙋‍♂️**
+```
+const curDate = new Date();
+console.log(curDate.setFullYear(2022));
+// The setFullYear() method can optionally set month and day
+console.log(curDate.setFullYear(2022, 10, 5));
+let setmonth = curDate.setMonth(10); // 0-11 jan to dec
+console.log(setmonth);
+console.log(curDate.setDate(5));
+console.log(curDate.toLocaleString());
+```
+
+### 👉 Time Method
+### **How to get the indivisual Time   🙋‍♂️**
+```
+console.log(curTime.getTime());
+// The getTime() method returns the number of milliseconds since January 1, 1970
+console.log(curTime.getHours());
+//The getHours() method returns the hours of a date as a number (0-23)
+console.log(curTime.getMinutes());
+console.log(curTime.getSeconds());
+console.log(curTime.getMilliseconds());
+```
+
+### **How to set the indivisual Time   🙋‍♂️**
+```
+let curTime = new Date();
+// console.log(curTime.setTime());
+console.log(curTime.setHours(5));
+console.log(curTime.setMinutes(5));
+console.log(curTime.setSeconds(5));
+console.log(curTime.setMilliseconds(5));
+```
+
+```
+new Date().toLocaleTimeString(); // 11:18:48 AM
+//---
+new Date().toLocaleDateString(); // 11/16/2015
+//---
+new Date().toLocaleString(); // 11/16/2015, 11:18:48 PM
+```
+
+## **4.  Math object in JavaScript**
+- The JavaScript Math object allows you to perform mathematical tasks on numbers.
+
+#### **1.  console.log(Math.PI)  🙋‍♂️**
+- console.log(Math.PI);
+
+#### **2.  Math.round()  🙋‍♂️**
+- returns the value of x rounded to its nearest integer
+```
+let num = 10.501;
+console.log(Math.round(num));
+console.log(Math.round(4.6));
+console.log(Math.round(99.1));
+```
+
+#### **3.  Math.pow()  🙋‍♂️**
+- Math.pow(x, y) returns the value of x to the power of y
+```
+console.log(Math.pow(2,3));
+console.log(2**3);
+```
+
+#### **4.  Math.sqrt()  🙋‍♂️**
+- Math.sqrt(x) returns the square root of x
+```
+console.log(Math.sqrt(25));
+console.log(Math.sqrt(81));
+console.log(Math.sqrt(66));
+```
+
+#### **5.  Math.abs()  🙋‍♂️**
+- Math.abs(x) returns the absolute (positive) value of x
+```
+console.log(Math.abs(-55));
+console.log(Math.abs(-55.5));
+console.log(Math.abs(-955));
+console.log(Math.abs(4-6));
+```
+
+#### **6.  Math.ceil()  🙋‍♂️**
+- Math.ceil(x) returns the value of x rounded up to its nearest integer
+```
+console.log(Math.ceil(4.51));
+console.log(Math.round(4.51));
+console.log(Math.ceil(99.01));
+console.log(Math.round(99.1));
+```
+
+#### **7.  Math.floor()  🙋‍♂️**
+- Math.floor(x) returns the value of x rounded down to its nearest integer
+```
+console.log(Math.floor(4.7)); 
+console.log(Math.floor(99.1)); 
+```
+
+#### **8.  Math.min()  🙋‍♂️**
+- Math.min() can be used to find the lowest value in a list of arguments
+- console.log(Math.min(0, 150, 30, 20, -8, -200));
+
+#### **9.  Math.max()  🙋‍♂️**
+- Math.max() can be used to find the highest value in a list of arguments
+- console.log(Math.max(0, 150, 30, 20, -8, -200));
+
+#### **10.  Math.random()  🙋‍♂️**
+- Math.random() returns a random number between 0 (inclusive), and 1 (exclusive)
+```
+console.log(Math.floor(Math.random()*10));
+console.log(Math.floor(Math.random()*10)); // 0 to 9
+```
+
+#### **11.  Math.trunc()  🙋‍♂️**
+- The trunc() method returns the integer part of a number
+- if the argument is a positive number, Math.trunc() is equivalent to Math.floor(),otherwise Math.trunc() is equivalent to Math.ceil().
+```
+console.log(Math.trunc(4.6));
+console.log(Math.trunc(-99.1));
+```
+##  **Diff of Document and Window**
+![](/images/dom-1.jpg)
+## **5.  DOM(Document Object model)**
+- Window is the main container or we can say the global Object and any operations related to entire  browser window can be a part of window object. 
+- For ex 👉 the history or to find the url etc.
+- whereas the DOM is the child of Window Object
+- All the members like objects, methods or properties. If they are the part of window object then we do not refer the window object. 
+- Since window is the global object so you do not have to write down window it will be figured out by the runtime.
+
+- For example
+  - 👉 window.screen or just screen is a small information 
+object about physical screen dimensions.
+  - 👉 window.location giving the current URL
+  - 👉 window.document or just document is the main object 
+of the potentially visible (or better yet: rendered) document object model/DOM.
+
+- Where in the DOM we need to refer the document, 
+if we want to use the document object, methods or properties
+For example
+  - 👉 document.getElementById()
+
+- Window has methods, properties and object. 
+  - ex setTimeout() or setInterval() are the methods where as Document is the object of the Window and It also has a screen object with properties describing the physical display.
+
+## **6.  BOM(Browser Object model)**
+- Window has methods, properties and object. 
+  - ex setTimeout() or setInterval() are the methods where as Document is the object of the Window and 
+- It also has a screen object with properties describing the physical display.
+  - so example of window object properties are innerHeight, 
+innerWidth and there are many more 
+
+
+## **7.  DOM-vs-BOM**
+
+### DOM
+- The DOM is the Document Object Model, which deals with the document he HTML elements themselves, e.g. document and all traversal you would do in it, events, etc.
+  - For Ex: 
+     - change the background color to red
+     - document.body.style.background = "red";
+
+
+### BOM
+- The BOM is the Browser Object Model, which deals with browser components aside from the document, like history, location, navigator and screen (as well as some others that vary by browser). 
+OR 
+- In simple meaning all the Window operations which comes under BOM are performed usign BOM
+
+- Practical Eg on History object 
+  - Functions alert/confirm/prompt are also a part of BOM: 
+  - they are directly not related to the document, but represent pure browser methods of communicating with the user.
+
+```
+  alert(location.href); // shows current URL
+if (confirm("Want to Visit ThapaTechnical?")) {
+  location.href = "https://www.youtube.com/thapatechnical"; // redirect the browser to another URL
+}
+```
+
+## **8.  Navigate through the DOM**
+1. document.documentElement
+    - returns the Element that is the root element of the document. 
+2. document.head
+3. document.body
+4. document.body.childNodes (include tab,enter and whiteSpace)
+   - list of the direct children only 
+5. document.children (without text nodes, only regular Elements)
+6. document.childNodes.length
+
+<br>
+
+####  <u>Ques-1 </u> -How to check whether an element has child nodes or not? 👉
+-  we will use hasChildNodes()
+
+####  <u>Ques-2 </u> -How to find the child in DOM tree ? 👉
+```
+firstChild vs firstElementChild
+lastChild vs lastElementChild 
+const data = document.body.firstElementChild;
+undefined
+data
+data.firstElementChild
+data.firstElementChild.firstElementChild
+data.firstElementChild.firstElementChild.style.color = "red"
+vs 
+document.querySelector(".child-two").style.color = "yellow";
+```
+
+####  <u>Ques-3 </u> - How to find the Parent Nodes ? 👉
+```
+document.body.parentNode
+document.body.parentElement
+```
+
+####  <u>Ques-4 </u> - How to find or access the siblings ? 👉
+```
+document.body.nextSibling
+document.body.nextElementSibling
+document.body.previousSibling
+document.body.previousElementSibling
+```
+
+## **9.  EVENTS in JavaScript**
+- HTML events are "things" that happen to HTML elements. When JavaScript is used in HTML pages, JavaScript can "react" on these events.
+- 👨‍🏫 HTML Events
+  - An HTML event can be something the browser does, or something a user does.
+- Here are some examples of HTML events:
+  - An HTML web page has finished loading
+  -  An HTML input field was changed
+  - An HTML button was clicked Often, when events happen, you may want to do something.
+  - JavaScript lets you execute code when events are detected.
+  - HTML allows event handler attributes, with JavaScript code, 
+to be added to HTML elements.
+
+
+#### **1️⃣ 4 ways of writing Events in JavaScript**
+1. using inline events alert();
+2. By Calling a funcion (We already seen and most common way of writing) 
+3. using Inline events (HTML onclick="" property and element.onclick)
+4. using Event Listeners (addEventListener and IE's attachEvent)
+
+
+#### **2️⃣ What is Event Object ?**
+- Event object is the parent object of the event object. 
+- for Example 
+   - MouseEvent, focusEvent, KeyboardEvent etc 
+
+
+#### **3️⃣ MouseEvent in JavaScript**
+- The MouseEvent Object
+  - Events that occur when the mouse interacts with the HTML document belongs to the MouseEvent Object.
+
+#### **4️⃣ KeyboardEvent  in JavaScript**
+- Events that occur when user presses a key on the keyboard, belongs to the KeyboardEvent Object.
+- [Referance w3school](https://www.w3schools.com/jsref/obj_keyboardevent.asp)
+
+
+#### **5️⃣ InputEvents in JavaScript**
+- The onchange event occurs when the value of an element has been changed.
+- For radiobuttons and checkboxes, the onchange event occurs when the checked state has been changed.
+
+
+## **10.  TIMING EVENTS in JavaScript**
+- The window object allows execution of code at specified time intervals.These time intervals are called timing events.
+- The two key methods to use with JavaScript are:
+  - **setTimeout(function, milliseconds)** - Executes a function, after waiting a specified number of milliseconds.
+
+  - **setInterval(function, milliseconds)** - Same as setTimeout(), but repeats the execution of the function continuously.
+
+
+1️⃣ setTimeout()
+
+2️⃣ clearTimeout()
+
+3️⃣ setInterval()
+
+4️⃣ clearInterval()
+
+## **10.  Object oriented in JavaScript**
+-  What is Object Literal?
+   - Object literal is simply a key:value pair data structure. 
+   - Storing variables and functions together in one container, 
+we can refer this as an Objects.
+   - object = school bag 
+
+- How to create an Object?
+
+   ```
+   let bioData = { 
+      myName : "thapatechnical",
+      myAge : 26,
+      getData : function(){
+        console.log(`My name is ${bioData.myName} and my age is ${bioData.myAge}`);
+      }
+  }
+
+  bioData.getData();
+  ```
+  2nd way no need to write functions as well after es6
+   
+  ```
+  let bioData = { 
+  myName : "thapatechnical",
+  myAge : 26,
+  getData (){
+    console.log(`My name is ${bioData.myName} and my age is ${bioData.myAge}`);
+  }
+  }
+  bioData.getData();
+  ```
+
+- What if we want object as a value inside an Object ?
+
+  ``` 
+  let bioData = { 
+  myName : {
+    realName : "vinod",
+    channelName : "thapa technical" 
+  },
+  myAge : 26,
+  getData (){
+    console.log(`My name is ${bioData.myName} and my age is ${bioData.myAge}`);
+  }
+  }
+
+  console.log(bioData.myName.channelName );
+  ```
+
+- What is this Object?
+  - The definition  of "this" object is that it contain the current context. 
+  - The this object can have different values depending on where it is placed.
+
+```
+// For Example 1 
+console.log(this.alert('Awesome'));
+// it refers to the current context and that is window global object 
+
+
+// ex 2 
+function myName() {
+    console.log(this);
+}
+myName();
+
+
+// ex 3 
+
+var myNames = 'vinod';
+function myName() {
+    console.log(this.myNames);
+}
+myName();
+
+
+// ex 4 
+const obj = {
+    myAge : 26,
+    myName() {
+      console.log(this.myAge);
+    }
+}
+obj.myName();
+
+
+// ex 5 
+// this object will not work with arrow function bcz arrow function is bound to class.
+
+const obj = {
+    myAge : 26,
+    myName : () => {
+      console.log(this);
+    }
+}
+obj.myName();
+
+
+// ex 6
+
+let bioData = {
+    myName : {
+        realName : "vinod thapa",
+        channelName : 'thapa technical'
+    },
+    // things to remember is that the myName is the key and the object is act like a value 
+    myAge : 26,
+    getData (){
+      console.log(`My name is ${this.myName.channelName} and my age is ${this.myAge} `);
+    }
+  }
+
+  bioData.getData();  
+```
+
+- call method is used to call the method of another object 
+or with call(), an object can use a method belonging to another object 
+- But as per other it is simply the way to use the this keyword or another object 
+
+## **11. How JavaScript Works?**
+## **Advanced and Asynchronous JavaScript**
+
+```
+// Advanced JavaScript Section
+
+// 1️⃣: Event Propagation (Event Bubbling and Event Capturing)
+
+// check html file 
+
+
+// 2️⃣: Higher Order Function
+// function which takes another function as an arguments is called HOF 
+// wo function jo dusre function ko as an argument accept krta hai use HOF 
+
+
+// 3️⃣: Callback Function
+// function which get passed as an argument to another function is called CBF 
+// A callback function is a function that is passed as an argument to 
+// another function, to be “called back” at a later time. 
+
+// Jis bhi function ko hum kisi or function ke under as an arguments passed 
+// krte hai then usko hum CallBack fun bolte hai 
+
+
+// // we need to create a calculator 
+
+const add = (a,b) => {
+    return a+b;
+}
+// console.log(add(5,2));
+
+const subs = (a,b) => {
+    return Math.abs(a-b);
+}
+const mult = (a,b) => {
+    return a*b;
+}
+
+const calculator = (num1,num2, operator) => {
+  return operator(num1,num2);
+}
+
+calculator(5,2,subs)
+
+console.log(calculator(5,2,subs));
+
+// // I have to do the hardcoded for each operation which is bad
+// // we will use the callback and the HOF to make it simple to use 
+
+
+
+
+// // Now instead of calling each function indivisually we can call it
+// // by simply using one function that is calculator 
+
+console.log(calculator(5,6,add));
+console.log(calculator(5,6,subs));
+console.log(calculator(5,6,mult));
+
+// In the above example, calculator is the higher-order function, 
+// which accepts three arguments, the third one being the callback.
+// Here the calculator is called the Higher Order Function because it takes
+// another function as an argument 
+
+// and add, sub and mult are called the callback function bcz they are passed 
+// as an argument to another fucntion 
+
+// InterView Question 
+// Difference Between Higher Order Function and Callback Function ?
+
+
+```
+
+## **12. Asynchronous JavaScript**
+### Synchronous JavaScript Prog
+```
+1work = 10min
+2work = 5s
+
+const fun2 = () => {
+  console.log(`Function 2️⃣ is called`);
+}
+
+const fun1 = () => {
+  console.log(`Function 1 is called`);
+  fun2();
+  console.log(`Function 1 is called Again ✌`);
+}
+
+fun1();
+```
+
+### Asynchronous JavaScript Prog
+```
+const fun2 = () => {
+  setTimeout(()=> {
+      console.log(`Function 2️⃣  is called`);
+  }, 2000);
+}
+
+const fun1 = () => {
+  console.log(`Function 1 is called`);
+  fun2();
+  console.log(`Function 1 is called Again ✌`);
+}
+
+fun1();
+```
+
+## **13. Hoisting in JavaScript**
+- we have a creation phase and execution phase.
+- Hoisting in Javascript is a mechanism where variables and functions declarations are moved to the top of their scope before the code execute.
+```
+For Example 👇
+console.log(myName);
+let myName;
+myName = "thapa";
+
+// How it will be in output during creation phase 
+
+1: var myName = undefined;
+2: console.log(myName);
+3: myName = "thapa";
+
+```
+## **14. What is Scope Chain and Lexical Scoping in JavaScript?**
+- The scope chain is used to resolve the value of variable names 
+in JS.
+- scope chain in js is lexically defined, which means that we can see what the scope chain will be by looking at the code. 
+- At the top, we have the Global Scope, which is the window Object in the browser.
+- Lexical Scoping means Now, the inner function can get access to their parent functions variables But the vice-versa is not true.
+```
+// For Example 👇
+
+let a = "Hello guys. "; // global scope
+
+const first= () => {
+  let b = " How are you?"
+ 
+    const second = () => {
+      let c = " Hii, I am fine thank you🙏";
+      console.log(a+b+c);
+    }
+    second();
+    console.log(a+b+c); //I can't use C 
+}
+
+first();
+```
+
+## **15. What is Closures in JavaScript**
+- A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). 
+- In other words, a closure gives you access to an outer function’s scope from an inner function. 
+- In JavaScript, closures are created every time a function is created, at function creation time.
+```
+
+// For Example 👇
+
+const outerFun = (a) => {
+    let b = 10;
+    const innerFun = () => {
+      let sum = a+b;
+      console.log(`the sum of the two no is ${sum}`);
+    }
+    innerFun();
+}
+outerFun(5);
+
+// it same like lexical scoping 
+
+// One more Example 👇
+
+const outerFun = (a) => {
+  let b = 10;
+  const innerFun = () => {
+    let sum = a+b;
+    console.log(`the sum of the two no is ${sum}`);
+  }
+  return innerFun;
+}
+let checkClousure = outerFun(5);
+console.dir(checkClousure);
+
+"use strict"
+
+let x = "vinod";
+console.log(x);
+```
+
+## **16. Currying**
+
+```const sum = (num1) => (num2) => (num3) => console.log(num1+num2+num3); 
+sum(5)(3)(8);
+```
+
+## **17. CallBack Hell**
+```
+setTimeout(()=>{
+    console.log(`1️⃣ works is done`);    
+    setTimeout(()=>{
+        console.log(`2️⃣ works is done`); 
+        setTimeout(()=>{
+            console.log(`3️⃣ works is done`);  
+            setTimeout(()=>{
+                console.log(`4️⃣ works is done`); 
+                setTimeout(()=>{
+                    console.log(`5️⃣ works is done`);   
+                    setTimeout(()=>{
+                        console.log(`6️⃣ works is done`);    
+                    }, 1000) 
+                }, 1000)   
+            }, 1000)  
+        }, 1000)   
+    }, 1000)
+}, 1000)
+```

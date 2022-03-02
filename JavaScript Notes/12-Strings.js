@@ -40,10 +40,6 @@
 
 
 
-
-
-
-
 // 👉 Finding a String in a String
 
 // String.prototype.indexOf(searchValue [, fromIndex]) 🙋‍♂️
@@ -60,9 +56,6 @@
 
 
 
-
-
-
 // // String.prototype.lastIndexOf(searchValue [, fromIndex]) 🙋‍♂️
 // // Returns the index within the calling String object of the 
 // // last occurrence of searchValue, or -1 if not found.
@@ -70,13 +63,6 @@
 
 // const myBioData =  'I am the thapa Technical';
 // console.log(myBioData.lastIndexOf("t", 6));
-
-
-
-
-
-
-
 
 
 
@@ -135,8 +121,6 @@
 
 
 
-// 😀11: challenge Time 🏁
-
 // Display only 280 characters of a string like the 
 // one used in Twitter?
 
@@ -145,8 +129,6 @@
 // let myActualTweet = myTweets.slice(0,280);
 // console.log(myActualTweet);
 // console.log(myActualTweet.length);
-
-
 
 
 
@@ -184,7 +166,6 @@
 
 
 
-
 // 👉 Replacing String Content() 
 
 // String.prototype.replace(searchFor, replaceWith) 🙋‍♂️
@@ -206,9 +187,6 @@
 // the first match
 // 3:By default, the replace() method is case sensitive. 
 // Writing VINOD (with upper-case) will not work
-
-
-
 
 
 
@@ -235,11 +213,6 @@
 
 
 
-
-
-
-
-
 // The charCodeAt() Method 🙋‍♂️
 // The charCodeAt() method returns the unicode of the 
 // character at a specified index in a string:
@@ -260,7 +233,6 @@
 
 
 
-// 😀12: challenge Time 🏁
 
 // Return the Unicode of the last character in a string
 
@@ -281,21 +253,11 @@
 
 
 
-
-
-
-
-
-
-
-
 //👉  Other useful methods 
 
 // let myName = "vinod tHapa";
 // console.log(myName.toUpperCase()); 
 // console.log(myName.toLowerCase());
-
-
 
 
 
@@ -315,17 +277,12 @@
 
 
 
-
-
 // String.trim() 🙋‍♂️
 // The trim() method removes whitespace from both 
 // sides of a string
 
 // var str = "              Hello         World!            ";
 // console.log(str.trim());
-
-
-
 
 
 

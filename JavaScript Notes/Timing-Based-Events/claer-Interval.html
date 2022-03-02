@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clear-Interval</title>
+</head>
+<style>
+    body{
+        color: aliceblue;
+        background-color: #2a364f;
+        font-size: 30px;
+        padding-top: 30%;
+    }
+    .main-div{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    button{
+        background-color: rgb(34, 99, 34);
+        color: aliceblue;
+        font-size: 25px;
+        font-weight: 300;
+        text-align: center;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="main-div">
+        <div>
+            <p id="showMyName"></p>
+            <br>
+            <button id="btn">Start</button>
+            <button id="btn1">Stop</button>
+        </div>
+    </div>
+
+    <script>
+        const stopNum = document.querySelector('#showMyName');
+        const btn = document.querySelector('#btn');
+        const stopInterval = document.querySelector('#btn1')
+        let timeRef;
+        let num=0;
+
+        const showMyName = () => {
+            stopNum.innerHTML = "Loading..."
+            timeRef = setInterval(() => {
+                stopNum.innerHTML = `${num}`;
+                num++;
+            }, 1000);
+        }
+        btn.addEventListener('click', showMyName);
+
+        stopInterval.addEventListener('click', () => {
+            clearInterval(timeRef);
+        });
+    </script>
+</body>
+</html>

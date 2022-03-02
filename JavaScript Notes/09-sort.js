@@ -24,9 +24,6 @@
 // result when sorting numbers.
 
 
-
-// 😀7: challenge Time  🏁
-
 // 1: How to Sort the numbers in the array in ascending (up) and descending (down) order?
 
 // compareFunction	Optional. 
